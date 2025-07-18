@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
       fetchWeather(lastCity);
     } else {
       cityInput.value = '';
-      fetchWeather('London');
+      cityInput.focus();
+      fetchWeather('');
     }
     
     // Update time every second
@@ -345,4 +346,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
   // Initialize the app
   init();
+  cityInput.value = '';
+  cityInput.focus();
 });
